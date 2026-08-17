@@ -49,6 +49,8 @@ The main lookback windows were:
 
 ```text
 3 days, 7 days, 14 days, 30 days, 60 days
+```
+---
 
 ## Sensitivity Analysis
 
