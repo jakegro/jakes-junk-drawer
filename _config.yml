@@ -1,0 +1,15 @@
+title: "Jake's Junk Drawer"
+description: "Quant finance, data science, physics, and ideas I am trying to understand by building."
+author: "Jake Grossman"
+
+theme: minima
+
+baseurl: "/jakes-junk-drawer"
+url: "https://jakegro.github.io"
+
+header_pages:
+  - about.md
+  - projects.md
+  - blog.md
+
+show_excerpts: true
