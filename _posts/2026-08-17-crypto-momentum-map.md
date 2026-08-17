@@ -49,3 +49,9 @@ The main lookback windows were:
 
 ```text
 3 days, 7 days, 14 days, 30 days, 60 days
+
+## Sensitivity Analysis
+
+Next, I tested whether the strategy worked better at different lookback windows.
+
+![Momentum performance by lookback window]({{ site.baseurl }}/assets/images/crypto-momentum-map/figure_momentum_performance_by_lookback.png)
