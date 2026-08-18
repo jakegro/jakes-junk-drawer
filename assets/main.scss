@@ -523,3 +523,124 @@ th {
     grid-template-columns: 1fr;
   }
 }
+/* ============================================================
+   Background equations, draw-on-background mode, and RSS cleanup
+   ============================================================ */
+
+/* Hide default Minima RSS links */
+.rss-subscribe,
+.feed-subscribe {
+  display: none !important;
+}
+
+/* Keep main site content above background layers */
+.site-header,
+.page-content,
+.site-footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* Faint equation layer behind the site */
+.background-equations {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bg-equation {
+  position: absolute;
+  color: rgba(31, 78, 121, 0.105);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(0.9rem, 1.4vw, 1.35rem);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.eq-1 { left: 4%; top: 16%; transform: rotate(-7deg); }
+.eq-2 { right: 5%; top: 18%; transform: rotate(6deg); }
+.eq-3 { left: 7%; top: 46%; transform: rotate(4deg); }
+.eq-4 { right: 7%; top: 52%; transform: rotate(-5deg); }
+.eq-5 { left: 5%; bottom: 13%; transform: rotate(-3deg); }
+.eq-6 { right: 6%; bottom: 16%; transform: rotate(4deg); }
+
+/* Background drawing canvas */
+.notebook-draw-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  touch-action: none;
+}
+
+/* In draw mode, the canvas can receive drawing input */
+body.draw-mode .notebook-draw-canvas {
+  pointer-events: auto;
+  cursor: crosshair;
+}
+
+/* Floating draw controls */
+.draw-toolbar {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px;
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.10);
+  backdrop-filter: blur(8px);
+}
+
+.draw-toolbar button {
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--ink);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 7px 11px;
+}
+
+.draw-toolbar button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+body.draw-mode .draw-toggle {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.draw-status {
+  color: var(--light-muted);
+  font-size: 0.78rem;
+  padding: 0 6px;
+}
+
+/* On small screens, keep controls compact */
+@media screen and (max-width: 650px) {
+  .background-equations {
+    display: none;
+  }
+
+  .draw-toolbar {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .draw-status {
+    display: none;
+  }
+}
