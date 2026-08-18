@@ -14,7 +14,7 @@ The strategy ranks coins by recent returns, builds long-short portfolios, includ
 
 **Main finding:** very short-term momentum failed after costs, while 30-day and 60-day momentum were more resilient.
 
-[Read the full post →]({{ site.baseurl }}/2026/08/17/crypto-momentum-map.html)
+[Read the post →]({{ site.baseurl }}/crypto-momentum-map/)
 
 ---
 
@@ -24,4 +24,4 @@ An equity extension using SimFin data. I tested residual momentum on five large-
 
 **Main finding:** a 60-day residual return signal had the strongest result in this small test, though the universe was too small to claim a robust strategy.
 
-[Read the crypto post with appendix →]({{ site.baseurl }}/2026/08/17/crypto-momentum-map.html)
+[Read the crypto post with appendix →]({{ site.baseurl }}/crypto-momentum-map/)
