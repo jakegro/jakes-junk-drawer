@@ -10,4 +10,8 @@ A collection of project writeups, research notes, and ideas I am trying to under
 
 ## Posts
 
-- [Crypto Momentum Map: What Survives Trading Costs?]({{ site.baseurl }}/2026/08/17/crypto-momentum-map.html)
+### Crypto Momentum Map: What Survives Trading Costs?
+
+A quant finance project testing whether recent crypto winners continue to outperform recent losers after trading costs.
+
+[Read the post →]({{ site.baseurl }}/2026/08/17/crypto-momentum-map.html)
