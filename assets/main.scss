@@ -1,0 +1,391 @@
+---
+---
+
+@import "minima";
+
+/* ============================================================
+   Jake's Junk Drawer
+   Theme: Curious Notebook Lab
+   Fun, warm, professional, and slightly weird in a good way.
+   ============================================================ */
+
+:root {
+  --paper: #fffaf0;
+  --paper-soft: #fffdf8;
+  --ink: #1f2937;
+  --muted: #667085;
+  --line: #e7dccb;
+
+  --blue: #2563eb;
+  --blue-soft: #dbeafe;
+
+  --orange: #f97316;
+  --orange-soft: #ffedd5;
+
+  --green: #059669;
+  --green-soft: #d1fae5;
+
+  --purple: #7c3aed;
+  --purple-soft: #ede9fe;
+
+  --card: #ffffff;
+}
+
+/* Global page feel */
+
+body {
+  background:
+    linear-gradient(rgba(37, 99, 235, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.025) 1px, transparent 1px),
+    var(--paper);
+  background-size: 28px 28px;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.wrapper {
+  max-width: 980px;
+}
+
+.page-content {
+  padding-top: 36px;
+}
+
+/* Header */
+
+.site-header {
+  background: rgba(255, 253, 248, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-title,
+.site-title:visited {
+  color: var(--ink);
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.site-title:hover {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.site-nav .page-link {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.site-nav .page-link:hover {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* Typography */
+
+h1, h2, h3 {
+  color: var(--ink);
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  font-weight: 850;
+}
+
+h2 {
+  margin-top: 42px;
+  font-weight: 800;
+}
+
+h3 {
+  font-weight: 750;
+}
+
+p {
+  color: var(--ink);
+}
+
+a {
+  color: var(--blue);
+  font-weight: 650;
+}
+
+a:hover {
+  color: #1d4ed8;
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.16), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.14), transparent 30%),
+    var(--paper-soft);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 46px;
+  margin-bottom: 34px;
+  box-shadow: 0 20px 50px rgba(31, 41, 55, 0.08);
+}
+
+.hero::before {
+  content: "✦";
+  position: absolute;
+  right: 34px;
+  top: 24px;
+  color: var(--orange);
+  font-size: 2.3rem;
+  opacity: 0.75;
+}
+
+.hero-kicker {
+  display: inline-block;
+  background: var(--orange-soft);
+  color: #9a3412;
+  border: 1px solid #fed7aa;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 6vw, 4.1rem);
+  line-height: 1.03;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.15rem;
+  max-width: 720px;
+}
+
+/* Buttons */
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--blue);
+  color: white !important;
+  padding: 11px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.22);
+}
+
+.button:hover {
+  background: #1d4ed8;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.button-secondary {
+  display: inline-block;
+  background: white;
+  color: var(--ink) !important;
+  border: 1px solid var(--line);
+  padding: 11px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.button-secondary:hover {
+  border-color: var(--blue);
+  color: var(--blue) !important;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* Cards */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  gap: 18px;
+  margin: 24px 0 36px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 14px 34px rgba(31, 41, 55, 0.06);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 44px rgba(31, 41, 55, 0.09);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.project-card {
+  border-left: 7px solid var(--blue);
+}
+
+.idea-card {
+  border-left: 7px solid var(--orange);
+}
+
+.data-card {
+  border-left: 7px solid var(--green);
+}
+
+.physics-card {
+  border-left: 7px solid var(--purple);
+}
+
+/* Small labels */
+
+.label-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.drawer-label {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: white;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 750;
+}
+
+.label-blue {
+  background: var(--blue-soft);
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+
+.label-orange {
+  background: var(--orange-soft);
+  color: #9a3412;
+  border-color: #fed7aa;
+}
+
+.label-green {
+  background: var(--green-soft);
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.label-purple {
+  background: var(--purple-soft);
+  color: #5b21b6;
+  border-color: #ddd6fe;
+}
+
+/* Project metadata box */
+
+.project-meta {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 22px 26px;
+  margin: 24px 0 32px;
+  box-shadow: 0 14px 34px rgba(31, 41, 55, 0.06);
+}
+
+.project-meta p {
+  margin: 7px 0;
+  color: var(--ink);
+}
+
+/* Images */
+
+.post-content img {
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 38px rgba(31, 41, 55, 0.09);
+  margin: 26px 0;
+}
+
+/* Code blocks */
+
+pre,
+code {
+  border-radius: 10px;
+}
+
+pre {
+  padding: 16px;
+  border: 1px solid var(--line);
+}
+
+/* Blockquotes */
+
+blockquote {
+  background: white;
+  border-left: 6px solid var(--orange);
+  border-radius: 14px;
+  padding: 16px 20px;
+  color: var(--ink);
+}
+
+/* Tables */
+
+table {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+th {
+  background: #f8fafc;
+}
+
+/* Footer */
+
+.site-footer {
+  background: rgba(255, 253, 248, 0.95);
+  border-top: 1px solid var(--line);
+}
+
+/* Mobile */
+
+@media screen and (max-width: 650px) {
+  .hero {
+    padding: 30px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .button,
+  .button-secondary {
+    text-align: center;
+  }
+}
