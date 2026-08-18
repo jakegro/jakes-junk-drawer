@@ -3,8 +3,10 @@ layout: home
 title: "Jake's Junk Drawer"
 ---
 
+{% assign latest_post = site.posts.first %}
+
 <div class="hero">
-  <div class="hero-kicker">Welcome to the drawer</div>
+  <div class="hero-kicker">Project notebook</div>
 
   <h1>Jake’s Junk Drawer</h1>
 
@@ -17,22 +19,22 @@ title: "Jake's Junk Drawer"
   </p>
 
   <div class="label-row">
-    <span class="drawer-label label-blue">market experiments</span>
-    <span class="drawer-label label-green">data messes</span>
-    <span class="drawer-label label-purple">physics brain</span>
-    <span class="drawer-label label-orange">half-polished ideas</span>
+    <span class="drawer-label">Quant research</span>
+    <span class="drawer-label">Statistical modeling</span>
+    <span class="drawer-label">Time series</span>
+    <span class="drawer-label">Technical notes</span>
   </div>
 
   <div class="button-row">
-    <a class="button" href="{{ site.baseurl }}/crypto-momentum-map/">Read the first post</a>
+    <a class="button" href="{{ latest_post.url | relative_url }}">Read latest post</a>
     <a class="button-secondary" href="{{ site.baseurl }}/projects/">View projects</a>
   </div>
 </div>
 
-## Featured from the drawer
+## Latest from the notebook
 
-<div class="card project-card">
-  <h3>Crypto Momentum Map: What Survives Trading Costs?</h3>
+<div class="card card-accent">
+  <h3>{{ latest_post.title }}</h3>
 
   <p>
     I tested whether recent crypto winners continue to outperform recent crypto losers
@@ -45,42 +47,42 @@ title: "Jake's Junk Drawer"
     while 30-day and 60-day momentum were more resilient.
   </p>
 
-  <a class="button" href="{{ site.baseurl }}/crypto-momentum-map/">Read the post →</a>
+  <a class="button" href="{{ latest_post.url | relative_url }}">Read the post →</a>
 </div>
 
-## What lives in the drawer?
+## Research areas
 
 <div class="card-grid">
 
-  <div class="card project-card">
-    <h3>Quant finance</h3>
+  <div class="card card-accent">
+    <h3>Quantitative finance</h3>
     <p>
-      Backtests, signals, risk, trading costs, and the difference between
-      a cool idea and a strategy that survives reality.
+      Backtests, signals, risk, transaction costs, and the difference between
+      a promising idea and a strategy that survives implementation.
     </p>
   </div>
 
-  <div class="card data-card">
+  <div class="card card-neutral">
     <h3>Data science</h3>
     <p>
-      Python projects, statistical modeling, machine learning, messy data,
-      and honest model evaluation.
+      Python projects, statistical modeling, machine learning, time series,
+      and model evaluation on imperfect data.
     </p>
   </div>
 
-  <div class="card physics-card">
-    <h3>Physics brain</h3>
+  <div class="card card-neutral">
+    <h3>Physics-inspired modeling</h3>
     <p>
-      Simple models, complicated systems, uncertainty, and checking whether
-      assumptions actually make sense.
+      Breaking complicated systems into simpler models and checking whether
+      the assumptions actually hold.
     </p>
   </div>
 
-  <div class="card idea-card">
-    <h3>Useful nonsense</h3>
+  <div class="card card-neutral">
+    <h3>Project notes</h3>
     <p>
-      Weird project notes, startup thoughts, experiments, and ideas from
-      the edge of my notebook.
+      Technical writeups, research ideas, experiments, and lessons from
+      projects that are still developing.
     </p>
   </div>
 
