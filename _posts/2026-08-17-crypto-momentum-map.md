@@ -3,6 +3,7 @@ layout: post
 title: "Crypto Momentum Map: What Survives Trading Costs?"
 date: 2026-08-17 16:35:00 -0400
 categories: quant finance crypto data-science
+permalink: /crypto-momentum-map/
 ---
 
 > **Project type:** Quantitative research backtest  
