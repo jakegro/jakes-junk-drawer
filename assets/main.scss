@@ -333,3 +333,193 @@ th {
     text-align: center;
   }
 }
+
+/* ============================================================
+   Notebook accents, interactive canvas, and RSS cleanup
+   ============================================================ */
+
+/* Hide default Minima RSS link */
+.rss-subscribe {
+  display: none !important;
+}
+
+/* Keep page content above decorative margin notes */
+.page-content {
+  position: relative;
+}
+
+/* Subtle notebook margin accents on large screens */
+@media screen and (min-width: 1120px) {
+  .page-content::before,
+  .page-content::after {
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    color: rgba(31, 78, 121, 0.10);
+    font-family: Georgia, serif;
+    line-height: 1.55;
+    white-space: pre;
+  }
+
+  .page-content::before {
+    content: "margin notes\A────────\Abeta?\Asignal → return\Acost matters";
+    left: 22px;
+    top: 170px;
+    font-size: 0.86rem;
+  }
+
+  .page-content::after {
+    content: "Σ w_i = 0\Ar_{t+1}\Aα, β\A───────";
+    right: 24px;
+    top: 210px;
+    font-size: 0.98rem;
+  }
+
+  .wrapper,
+  .site-header,
+  .site-footer,
+  .hero,
+  .card,
+  .project-meta,
+  .notebook-lab {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Notebook margin line */
+@media screen and (min-width: 900px) {
+  .wrapper {
+    position: relative;
+  }
+
+  .wrapper::before {
+    content: "";
+    position: absolute;
+    left: -24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(31, 78, 121, 0.08);
+  }
+}
+
+/* Notebook lab section */
+
+.notebook-lab {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 20px;
+  align-items: stretch;
+  margin: 24px 0 38px;
+}
+
+.sketch-card,
+.draw-card {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 12px 28px rgba(17, 24, 39, 0.045);
+}
+
+.sketch-card h3,
+.draw-card h3 {
+  margin-top: 0;
+}
+
+.margin-note {
+  color: var(--light-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.equation-stack {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.equation-note {
+  background: #fbfaf7;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--ink);
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  padding: 10px 12px;
+}
+
+.doodle-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.doodle-chip {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  padding: 7px 10px;
+}
+
+/* Interactive drawing canvas */
+
+.draw-canvas-wrap {
+  background-color: #fffefb;
+  background-image:
+    linear-gradient(rgba(31, 41, 55, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 41, 55, 0.06) 1px, transparent 1px);
+  background-size: 18px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  height: 220px;
+  margin: 14px 0 12px;
+  overflow: hidden;
+}
+
+.draw-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.canvas-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.canvas-hint {
+  color: var(--light-muted);
+  font-size: 0.84rem;
+  margin: 0;
+}
+
+.clear-canvas {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 650;
+  padding: 7px 10px;
+}
+
+.clear-canvas:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media screen and (max-width: 850px) {
+  .notebook-lab {
+    grid-template-columns: 1fr;
+  }
+}
