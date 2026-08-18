@@ -23,3 +23,5 @@ The strategy ranks coins by recent returns, builds long-short portfolios, includ
 An equity extension using SimFin data. I tested residual momentum on five large-cap technology stocks after adjusting for QQQ exposure.
 
 **Main finding:** a 60-day residual return signal had the strongest result in this small test, though the universe was too small to claim a robust strategy.
+
+[Read the crypto post with appendix →]({{ site.baseurl }}/2026/08/17/crypto-momentum-map.html)
