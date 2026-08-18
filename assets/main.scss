@@ -578,10 +578,19 @@ th {
   touch-action: none;
 }
 
-/* In draw mode, the canvas can receive drawing input */
+/* 
+   In draw mode, move the canvas above the page content
+   so it can actually receive mouse/touch input.
+*/
 body.draw-mode .notebook-draw-canvas {
+  z-index: 19;
   pointer-events: auto;
   cursor: crosshair;
+}
+
+/* Keep the draw controls above the drawing canvas */
+.draw-toolbar {
+  z-index: 30;
 }
 
 /* Floating draw controls */
