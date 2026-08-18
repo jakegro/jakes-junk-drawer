@@ -17,7 +17,7 @@ I tested whether recent crypto winners continue to outperform recent crypto lose
 
 The main finding: very short-term crypto momentum failed after costs, while 30-day and 60-day momentum were more resilient.
 
-[Read the post →]({{ site.baseurl }}/2026/08/17/crypto-momentum-map.html)
+[Read the post →]({{ site.baseurl }}/crypto-momentum-map/)
 
 ---
 
